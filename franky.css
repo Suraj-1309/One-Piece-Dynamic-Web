@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    padding: 8% 0% 0% 1%;
+}
+
+.franky{
+    display: flex;
+    width: 20%;
+    height: 250px;
+    gap: 2px;
+}
+
+.franky > img{
+    width: 20%;
+    height: 100 px;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+
+.franky > img:hover{
+    width: 350%; 
+}

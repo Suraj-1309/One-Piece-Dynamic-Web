@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@font-face {
+    font-family: "Japan Wave";
+    src: url("https://db.onlinewebfonts.com/t/e34270355410b20f6d6edde431e13b72.eot");
+    src: url("https://db.onlinewebfonts.com/t/e34270355410b20f6d6edde431e13b72.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/e34270355410b20f6d6edde431e13b72.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/e34270355410b20f6d6edde431e13b72.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/e34270355410b20f6d6edde431e13b72.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/e34270355410b20f6d6edde431e13b72.svg#Japan Wave")format("svg");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#main{
+    background-image: url('11242_one_piece\ \(1\).jpg');
+    background-size: cover;
+}
+
+header{
+    position: absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    padding : 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+    
+.NIKA{
+        font-family: 'Japan Wave';
+        font-weight: bolder;
+        font-size: 3em;
+        color:red;
+        pointer-events: none;
+    }
+
+.navigation a {
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        padding: 6px 15px;
+        border-radius: 20px;
+        margin: 0 10px;
+        font-weight: 900;
+        border: 2px solid black;
+        color: white;
+        background-color: #d1f0f8;
+
+    }
+
+.navigation a:hover,
+.navigation a.active{
+    background: #40A2E3;
+    color: black;
+
+}
+
+.one{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+#mainheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Japan Wave';
+    font-weight: bolder;
+    font-size: 125px;
+  }
+  #mainheading:hover{
+    color: red;
+  }
+  
+  .blood-splat {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, transparent 20%, rgba(255, 0, 0, 0.5) 30%, rgba(255, 0, 0, 0.8) 80%, rgba(255, 0, 0, 0.9));
+    background-size: 100px 100px;
+    background-position: 50% 50%;
+    animation: splatter 1s ease-out forwards;
+  }
+  
+  @keyframes splatter {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+.navb{
+    font-size: 20px;
+
+    height: 80px;
+}
+
+
+#characterList {
+    display: none;
+}
+
+#characterList.show {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#characterList img {
+    width: 100px; /* Adjust image size as needed */
+    margin: 10px; /* Adjust spacing between images */
+}
+#chooseCharacterButton {
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: 2px solid black; /* Border color */
+    background-color: transparent; /* Transparent background */
+    color: white; /* Text color */
+    font-size: 16px;
+    font-weight: 900; 
+    background-color: #BBE2EC;/* Adjust font size as needed */
+    border-radius: 30px; /* Border radius to make it pill-shaped */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+#chooseCharacterButton:hover {
+    background-color: #40A2E3; /* Background color on hover */
+    color: black; /* Text color on hover */
+}
+#characterList {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px); /* Position it just below the button with a small gap */
+    left: 50%; /* Position it at the center */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: transparent; /* Background color for the character list */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for visual separation */
+    z-index: 1; /* Ensure it appears above other content */
+    max-width: 900px; /* Limit the maximum width of the character list */
+    border-radius: 10px; /* Set border radius for smooth edges */
+}
+
+
+#characterList img {
+    width: 50px;
+    height: 50px; /* Adjust image size as needed */
+    margin: 12px; /* Adjust spacing between images */
+}
+
+/*cards*/
+.card {
+    width: 17em;
+    height: 22.5em;
+    background: #171717;
+    transition: 1s ease-in-out;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card span {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+  }
+  
+  .card .info {
+    font-weight: 400;
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 0.72em;
+    margin: 1em;
+  }
+  
+  .card .img {
+    width: 4.8em;
+    height: 4.8em;
+    background: white;
+    border-radius: 15px;
+    margin: auto;
+  }
+  
+  .card .share {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+  
+  .card a {
+    color: white;
+    transition: .4s ease-in-out;
+  }
+  
+  .card a:hover {
+    color: red;
+  }
+  
+  .card button {
+    padding: 0.8em 1.7em;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: .4s ease-in-out;
+  }
+  
+  .card button:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+  }
