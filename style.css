@@ -11,234 +11,381 @@
 }
 
 
+/* Resetting default margin and padding */
+/* Resetting default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f9f9f9;
-    min-height: 100vh;
-    overflow-x: hidden;
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #main{
-    background-image: url('11242_one_piece\ \(1\).jpg');
-    background-size: cover;
+  background-image: url('11242_one_piece\ \(1\).jpg');
+  background-size: cover;
 }
 
 header{
-    position: absolute;
-    top : 0;
-    left : 0;
-    width : 100%;
-    padding : 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+  position: absolute;
+  top : 0;
+  left : 0;
+  width : 100%;
+  padding : 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
-    
+  
 .NIKA{
-        font-family: 'Japan Wave';
-        font-weight: bolder;
-        font-size: 3em;
-        color:red;
-        pointer-events: none;
-    }
+  font-family: 'Japan Wave';
+  font-weight: bolder;
+  font-size: 3em;
+  color:red;
+  pointer-events: none;
+}
 
 .navigation a {
-        position: relative;
-        z-index: 1;
-        text-decoration: none;
-        padding: 6px 15px;
-        border-radius: 20px;
-        margin: 0 10px;
-        font-weight: 900;
-        border: 2px solid black;
-        color: white;
-        background-color: #d1f0f8;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight: 900;
+  border: 2px solid black;
+  color: white;
+  background-color: #d1f0f8;
 
-    }
+}
 
 .navigation a:hover,
 .navigation a.active{
-    background: #40A2E3;
-    color: black;
+  background: #40A2E3;
+  color: black;
 
 }
 
 .one{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
 }
 #mainheading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Japan Wave';
-    font-weight: bolder;
-    font-size: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Japan Wave';
+  font-weight: bolder;
+  font-size: 125px;
+}
+#mainheading:hover{
+  color: red;
+}
+
+.blood-splat {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 20%, rgba(255, 0, 0, 0.5) 30%, rgba(255, 0, 0, 0.8) 80%, rgba(255, 0, 0, 0.9));
+  background-size: 100px 100px;
+  background-position: 50% 50%;
+  animation: splatter 1s ease-out forwards;
+}
+
+@keyframes splatter {
+  0% {
+    transform: scale(0);
   }
-  #mainheading:hover{
-    color: red;
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
-  
-  .blood-splat {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: radial-gradient(circle, transparent 20%, rgba(255, 0, 0, 0.5) 30%, rgba(255, 0, 0, 0.8) 80%, rgba(255, 0, 0, 0.9));
-    background-size: 100px 100px;
-    background-position: 50% 50%;
-    animation: splatter 1s ease-out forwards;
-  }
-  
-  @keyframes splatter {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0;
-    }
-  }
+}
 
 .navb{
-    font-size: 20px;
+  font-size: 20px;
 
-    height: 80px;
+  height: 80px;
 }
 
 
 #characterList {
-    display: none;
+  display: none;
 }
 
 #characterList.show {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #characterList img {
-    width: 100px; /* Adjust image size as needed */
-    margin: 10px; /* Adjust spacing between images */
+  width: 100px; /* Adjust image size as needed */
+  margin: 10px; /* Adjust spacing between images */
 }
 #chooseCharacterButton {
-    padding: 10px 20px; /* Adjust padding as needed */
-    border: 2px solid black; /* Border color */
-    background-color: transparent; /* Transparent background */
-    color: white; /* Text color */
-    font-size: 16px;
-    font-weight: 900; 
-    background-color: #BBE2EC;/* Adjust font size as needed */
-    border-radius: 30px; /* Border radius to make it pill-shaped */
-    cursor: pointer; /* Show pointer cursor on hover */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: 2px solid black; /* Border color */
+  background-color: transparent; /* Transparent background */
+  color: white; /* Text color */
+  font-size: 16px;
+  font-weight: 900; 
+  background-color: #BBE2EC;/* Adjust font size as needed */
+  border-radius: 30px; /* Border radius to make it pill-shaped */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
 }
 
 #chooseCharacterButton:hover {
-    background-color: #40A2E3; /* Background color on hover */
-    color: black; /* Text color on hover */
+  background-color: #40A2E3; /* Background color on hover */
+  color: black; /* Text color on hover */
 }
 #characterList {
-    display: none;
-    position: absolute;
-    top: calc(100% + 10px); /* Position it just below the button with a small gap */
-    left: 50%; /* Position it at the center */
-    transform: translateX(-50%); /* Center horizontally */
-    background-color: transparent; /* Background color for the character list */
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for visual separation */
-    z-index: 1; /* Ensure it appears above other content */
-    max-width: 900px; /* Limit the maximum width of the character list */
-    border-radius: 10px; /* Set border radius for smooth edges */
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px); /* Position it just below the button with a small gap */
+  left: 50%; /* Position it at the center */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: transparent; /* Background color for the character list */
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for visual separation */
+  z-index: 1; /* Ensure it appears above other content */
+  max-width: 900px; /* Limit the maximum width of the character list */
+  border-radius: 10px; /* Set border radius for smooth edges */
 }
 
 
 #characterList img {
-    width: 50px;
-    height: 50px; /* Adjust image size as needed */
-    margin: 12px; /* Adjust spacing between images */
+  width: 50px;
+  height: 50px; /* Adjust image size as needed */
+  margin: 12px; /* Adjust spacing between images */
 }
 
+.container {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards as needed */
+  justify-content: center; /* Centers the cards horizontally */
+}
+
+/* Keyframe for footer animation */
+
+
 /*cards*/
+
 .card {
-    width: 17em;
-    height: 22.5em;
-    background: #171717;
-    transition: 1s ease-in-out;
-    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    display: flex;
-    flex-direction: column;
-  }
+  width: 17em;
+  height: 22.5em;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: #FFFFEC;
+}
+
+
+.card .img img {
+  width: 120%; /* Adjust image width to fill the container */
+  height: auto; /* Allow the height to adjust proportionally */
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  opacity: 1; /* Image is visible by default */
+  transition: opacity 100000s ease-in-out; /* Smooth opacity transition */
+  display: block; /* Ensuring the image is a block element */
+}
+.card:hover .img img {
+  width: 7em;
+  height: 7em;
+  border-radius: 15px;
+  margin: auto;
+  opacity: 0;
+  transition: background 0.8s ease-in-out, color 0.8s ease-in-o /* Hide the image on hover */
+}
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  margin: 1em;
+  font-family:'Times New Roman', Times, serif;
+}
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.card:hover {
+  font-family:'Times New Roman', Times, serif;
+  width: 17em;
+  height: 22.5em;
+  background: black;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.8s ease-in-out, color 0.8s ease-in-o
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: background 0.8s ease-in-out, color 0.8s ease-in-out; /* Smooth button transition */
+}
+.card button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+  transition: background 0.8s ease-in-out, color 0.8s ease-in-o
+}
+
+.card .name{
+  font-family: 'Japan Wave';
+  font-weight: bolder;
+  font-size: 1.5em;
+  color:red;
+  pointer-events: none;
+}
+
+
+/* Styling the footer container */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+/* Styling footer content */
+.footer-content {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Styling footer info section */
+.footer-info, .footer-links, .footer-contact {
+  flex: 1;
+  margin: 0 20px;
   
-  .card span {
-    font-weight: bold;
+}
+
+/* Styling footer heading */
+.footer-info h3, .footer-links h3, .footer-contact h3 {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Styling footer links */
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Styling social media icons */
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff; /* Set social media icon color to white */
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: white; /* Light Coral color on hover */
+}
+
+/* Styling contact details */
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+/* Styling email link */
+.contact-info a {
+  color: #fff; /* Set email link color to white */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: white;
+  text-decoration: underline; /* Add underline on hover */
+}
+
+
+
+@keyframes footerAnimation {
+  0% {
     color: white;
-    text-align: center;
-    display: block;
-    font-size: 1em;
+    transform: translateY(0);
+    filter: hue-rotate(0deg);
   }
-  
-  .card .info {
-    font-weight: 400;
+  50% {
     color: white;
-    display: block;
-    text-align: center;
-    font-size: 0.72em;
-    margin: 1em;
+    transform: translateY(-15px) rotate(3deg);
+    filter: hue-rotate(180deg);
   }
-  
-  .card .img {
-    width: 4.8em;
-    height: 4.8em;
-    background: white;
-    border-radius: 15px;
-    margin: auto;
-  }
-  
-  .card .share {
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-  }
-  
-  .card a {
+  100% {
     color: white;
-    transition: .4s ease-in-out;
+    transform: translateY(-10px) rotate(-3deg);
+    filter: hue-rotate(360deg);
   }
-  
-  .card a:hover {
-    color: red;
-  }
-  
-  .card button {
-    padding: 0.8em 1.7em;
-    display: block;
-    margin: auto;
-    border-radius: 25px;
-    border: none;
-    font-weight: bold;
-    background: #ffffff;
-    color: rgb(0, 0, 0);
-    transition: .4s ease-in-out;
-  }
-  
-  .card button:hover {
-    background: red;
-    color: white;
-    cursor: pointer;
-  }
+}
+
+/* Applying animation to footer */
+.footer-content {
+  color: white;
+  animation: footerAnimation 3s infinite alternate forwards; /* Added animation-fill-mode */
+}
